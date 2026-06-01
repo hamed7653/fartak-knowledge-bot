@@ -1,0 +1,4 @@
+Fartak Tech IT Support & Network:
+- VPN Access: To bypass network restrictions or access global servers, employees must use the approved VLESS protocol via the company's X-UI panel.
+- Password Reset: Contact IT on Slack (#it-helpdesk) for active directory resets.
+- Security: Sharing VPN configs or SNI details with non-employees is strictly prohibited.

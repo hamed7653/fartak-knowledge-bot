@@ -1,0 +1,4 @@
+Product: Fartak EPMS (Enterprise Project Management System)
+- Target Audience: Industrial and power plant sectors.
+- Core Features: WBS creation, Earned Value Management (EVM) tracking, and RCPSP scheduling.
+- Key Constraint: The "Delivery Date" parameter is a vital hard-coded constraint for prioritization and must always be visible in the user dashboard.
