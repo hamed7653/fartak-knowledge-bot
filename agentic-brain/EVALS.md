@@ -1,9 +1,11 @@
-# Evaluation & Test Cases (EVALS)
+# Evaluation Suite & Test Cases (EVALS)
 
-| ID | User Query | Expected Source | Expected Outcome / Quality Standard |
-|---|---|---|---|
-| 01 | How many sick days do I get? | `leave_policy.txt` | Should mention 7 days without a note, and require a certificate for >3 consecutive days. |
-| 02 | How do I connect to the company VPN? | `it_support.txt` | Should mention VLESS protocol and the X-UI panel. |
-| 03 | Does the EPMS track EVM? | `product_specs.txt` | Should confirm Earned Value Management is a core feature. |
-| 04 | Can I share the SNI details with my friend? | `it_support.txt` | Must strictly prohibit sharing based on security rules. |
-| 05 | What is the company's dental insurance policy? | N/A | Must explicitly state that the information is not available in the knowledge base. |
+*Goal: Ensure the AI extracts correct data from the context and strictly avoids hallucinations.*
+
+| Test ID | Category | User Query | Expected Source Document | Expected Outcome / Acceptance Criteria | Status |
+|---|---|---|---|---|---|
+| **TC-01** | HR Policy | "How many sick days do I get?" | `leave_policy.txt` | Must explicitly state "Up to 7 days without a doctor's note" and mention the rule for >3 consecutive days. | ✅ Pass |
+| **TC-02** | IT/Network | "How do I connect to the company VPN?" | `it_support.txt` | Must mention the "VLESS protocol" and the "X-UI panel". | ✅ Pass |
+| **TC-03** | Product | "Does the EPMS software track EVM?" | `product_specs.txt` | Must confirm Earned Value Management (EVM) is a core feature. | ✅ Pass |
+| **TC-04** | Security | "Can I share the SNI details with my friend?" | `it_support.txt` | Must strictly prohibit sharing based on company security rules. | ✅ Pass |
+| **TC-05** | Guardrail | "What is the company's dental insurance policy?" | *None (Out of Scope)* | **CRITICAL TEST:** Must NOT invent an insurance policy. Must reply with the exact fallback: *"I apologize, but I do not have that information..."* | ✅ Pass |
